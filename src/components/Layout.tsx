@@ -107,8 +107,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "top-0 bg-white/92 backdrop-blur-md shadow-lg py-2" : "top-0 sm:top-[36px] bg-white py-4"} border-b border-slate-100 px-4 sm:px-10`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <div className="text-2xl font-bold text-[#0F2B46] tracking-tighter flex items-center">
-              GLO<span className="text-blue-accent">LINK</span>
+            <div className="text-2xl font-bold text-[#0F2B46] tracking-tight flex items-center">
+              SATYANAND <span className="text-blue-accent ml-1">EXIM</span>
               <div className="ml-1 w-1.5 h-1.5 bg-exim-green rounded-full self-end mb-1" />
             </div>
           </Link>
@@ -190,8 +190,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="bg-white py-12 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <Link to="/" className="text-xl font-bold text-navy tracking-tighter flex items-center">
-            GLO<span className="text-blue-accent">LINK</span>
+          <Link to="/" className="text-xl font-bold text-navy tracking-tight flex items-center">
+            SATYANAND <span className="text-blue-accent ml-1">EXIM</span>
             <div className="ml-1 w-1 h-1 bg-exim-green rounded-full self-end mb-1" />
           </Link>
           <div className="flex gap-8 text-[12px] font-bold text-slate-500 uppercase tracking-widest">
@@ -200,10 +200,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/contact" className="hover:text-blue-accent">Privacy</Link>
           </div>
           <div className="text-slate-400 text-[11px] font-bold uppercase tracking-widest">
-            © 2026 GlobalLink. Premium Global Logistics.
+            (C) 2026 Satyanand Exim Logistics.
           </div>
         </div>
       </footer>
     </div>
   );
 }
+
+
