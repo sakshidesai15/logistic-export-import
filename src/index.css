@@ -31,17 +31,53 @@
 }
 
 .btn-primary {
-  @apply bg-blue-accent text-white px-7 py-3 rounded-xl font-bold text-[15px] transition-all hover:bg-blue-700 shadow-md active:scale-95;
+  @apply bg-blue-accent text-white px-7 py-3 rounded-[30px] font-bold text-[15px] transition-all hover:bg-blue-700 shadow-md;
 }
 
 .btn-secondary {
-  @apply border border-slate-200 text-navy px-7 py-3 rounded-xl font-bold text-[15px] transition-all hover:bg-slate-50;
+  @apply border border-slate-200 text-navy px-7 py-3 rounded-[30px] font-bold text-[15px] transition-all hover:bg-slate-50;
+}
+
+.btn-primary,
+.btn-secondary {
+  transition-duration: 0.3s;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+.page-shell {
+  animation: pageFadeIn 0.55s ease both;
+}
+
+.scroll-reveal-target {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.72s ease, transform 0.72s ease;
+}
+
+.scroll-reveal-target.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Floating social sidebar */
 .social-sidebar {
   position: fixed;
-  right: 0;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 45;
@@ -108,7 +144,7 @@
 /* Services grid */
 .services-grid-section {
   background: #f7f7f7;
-  padding: 6rem 1rem;
+  padding: 5rem 1rem;
   border-top: 1px solid #e2e8f0;
 }
 
@@ -192,7 +228,7 @@
 /* Why choose us */
 .why-section {
   background: linear-gradient(180deg, #f8fbff 0%, #f4f8f5 100%);
-  padding: 6rem 1rem;
+  padding: 5rem 1rem;
 }
 
 .why-wrap {
@@ -379,7 +415,7 @@
   position: relative;
   min-height: 430px;
   width: 100%;
-  padding: 4.5rem 1rem;
+  padding: 5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -580,7 +616,7 @@
 /* About section */
 .about-section {
   background: #ffffff;
-  padding: 6rem 1rem;
+  padding: 5rem 1rem;
 }
 
 .about-wrap {
@@ -738,6 +774,7 @@
   transform: scale(1);
   transition: opacity 0.8s ease-in-out;
   animation: heroZoom 9s ease-in-out infinite alternate;
+  filter: brightness(0.86) saturate(0.94);
 }
 
 .hero-slide.is-active {
@@ -748,7 +785,7 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.58);
+  background: rgba(0, 0, 0, 0.64);
 }
 
 .hero-content {
@@ -760,6 +797,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.2rem;
 }
 
 .hero-title {
@@ -774,7 +812,7 @@
   letter-spacing: -0.01em;
   font-weight: 800;
   text-wrap: balance;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.7rem;
   opacity: 0;
   transform: translateY(14px);
   animation: revealUp 0.7s ease forwards;
@@ -788,7 +826,7 @@
   padding: 0.85rem 1.1rem;
   box-shadow: 0 20px 38px rgba(0, 0, 0, 0.24);
   width: min(820px, 92%);
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.45rem;
   opacity: 0;
   transform: translateY(12px);
   animation: revealFade 0.7s ease forwards;
@@ -810,7 +848,7 @@
   gap: 0.85rem;
   opacity: 0;
   transform: translateY(18px);
-  animation: revealFade 0.85s ease forwards;
+  animation: revealFade 0.7s ease forwards;
   animation-delay: 0.85s;
 }
 
@@ -824,11 +862,11 @@
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 600;
-  transition: transform 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .hero-btn:hover {
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(-3px);
 }
 
 .hero-btn-primary {
@@ -944,7 +982,7 @@
 
   .cta-section {
     min-height: 390px;
-    padding: 3.8rem 1rem;
+    padding: 4rem 1rem;
   }
 
   .cta-buttons {
@@ -969,7 +1007,7 @@
   }
 
   .services-grid-section {
-    padding: 4.5rem 1rem;
+    padding: 4rem 1rem;
   }
 
   .services-grid {
@@ -1038,6 +1076,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .page-shell,
+  .scroll-reveal-target {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .hero-slide,
   .hero-title,
   .hero-subtext-box,

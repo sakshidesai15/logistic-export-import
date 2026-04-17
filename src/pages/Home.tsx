@@ -397,7 +397,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section id="contact" className="py-24 bg-white border-t border-slate-200">
+      <section id="contact" className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-10">
           <div className="grid lg:grid-cols-2 gap-20">
             <div>

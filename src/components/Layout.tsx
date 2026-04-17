@@ -4,13 +4,14 @@ import {
   Menu, 
   X 
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+
+    const sections = Array.from(document.querySelectorAll("main section")).filter(
+      (section) => !section.classList.contains("hero-container")
+    );
+
+    sections.forEach((section) => section.classList.add("scroll-reveal-target"));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -78,7 +104,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
 
       {/* Navbar */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "top-0 bg-white/90 backdrop-blur-md shadow-md py-2" : "top-0 sm:top-[36px] bg-white py-4"} border-b border-slate-100 px-4 sm:px-10`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "top-0 bg-white/92 backdrop-blur-md shadow-lg py-2" : "top-0 sm:top-[36px] bg-white py-4"} border-b border-slate-100 px-4 sm:px-10`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
             <div className="text-2xl font-bold text-[#0F2B46] tracking-tighter flex items-center">
@@ -157,7 +183,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         ))}
       </aside>
 
-      <main className="flex-grow">
+      <main key={location.pathname} className="flex-grow page-shell">
         {children}
       </main>
 
