@@ -2,10 +2,8 @@ import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import {
   Globe,
-  Package,
   Clock3,
   Handshake,
-  Route,
   BadgeCheck,
   DollarSign,
   Truck,
@@ -16,13 +14,16 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import heroAgroOne from "../assets/HERO BACKGROUND IMAGES/lT86O8Cs3jLDr65VDh0QLxdVekma0LtEYv8uh4ZTwyoqRKTv07IKrkP-Lm20_zM8kKcTJ0niDokOW9yRpCAdiPpvpgc5AvRQGcYi4ljWLMZyhGYhQ1is3_g5jN.jpg";
-import heroAgroTwo from "../assets/HERO BACKGROUND IMAGES/3H3Pk8-H6Djecz1zli8ckhX1fnDYtYHIejIOIGp6y5IJzhVBSliozrVHtXkWmqfJyBa9tZmBeLe5jL9aAThbaidMp4rrQiIS6cqdJ7cnz75AQjag_qC-vTxkv0gJkIwFUE1_deCTIVWpqjrRagepEIL.jpg";
-import productSpices from "../assets/exim/6Lui-U_6KuNrEbJHymYlyjHu8hhTGPrAkdmRJpb0Ck_auUkb5unnv2fMvrVMswrGM7P7qWcUqiBOnsv3XtSsLqLUpzOuDrNMP9coy-krOygBoXTyzewXXmg-ujwt8n7cdnCh1-5hxK2wQTtkqBMpW22XO3DCE.jpg";
-import productChilli from "../assets/exim/X6Xj-kS9SR6-CKO0bhd_OxtUtdMhqdNV3r6OiRwv3FKaqCQEPO-US-n9ocIfFtBxte8EOIS9NE8BqvJe5RGc5DYaJ45mDzxdX7dnrxV6S3voOTIw1zwMLY0Iz4AxOrQ7GeqQ462MOksQNjxWtoy5SiqFSOq-aASoEr-PG1i7g.jpg";
+import spiceHeroOne from "../assets/spieces/3WgvVVgOuKX6G3zP2z0V_XAoyYHBfBXr6trmfYKm10-qhmUxQ_sgcvbdm5-bn42nj0BVUOmeaC8BbP_QcFRtW4Np5x06qUoWMCKcwsJ9HypGIFxFCg28OSCnADjCm_nk2VI1jZZ7s91uxJPNef-Hx8fnkscO2X8Sy_iU-CvjDS4NN3.jpg";
+import spiceHeroTwo from "../assets/spieces/6etXiCWjwUBnrPCxsBI5WSa8gnfrPW3rQ5NU5ysTFFKE6XCm58HM-91nPH3FMDf4jyQ1ulI7FZBDtIj1BJMhRSUrKVUMYj-fgEj_-3AsXfFRJtmgI50-oCDNQZEeLwA9ybv0uFEvNDShArJvoVLG7Pro_8hmpIA-z25iMP.jpg";
+import spiceProductOne from "../assets/spieces/G0ZYH814Pv6GkccL5v0vQrpkEzgkThUyu8Js1wOYxU0KJxvtfnVQ6OBrcp5ncHIXo3I_rERgV8x5R9wP7iUxIJwD1RMErhj1asAtdrnoc6VZO8DLkCfJYEP40DtsaGnlJN036bjZcX06IugtQsvHJygah0QieG91DZtoJU.jpg";
+import spiceProductTwo from "../assets/spieces/kcvZlAGoRQ6I6OnWiH_TjbLv6Md6JWB_UhLHTdTf4OHRGO9ykM0oAvTaDKGlNKq9SUfSkCJGwp53JVu5goXNQnw0ZM5Eonw18uCUxbQ8Sk4rDUSzLYhen0F78-vWuw-1xHQ4-KCc3hUl54f61XeWkEYEQctDcYn05oW7Oz.jpg";
+import spiceProductThree from "../assets/spieces/REDYsYP-jvs2Yae9xlTZhwtrdNYuKNO9Y0ARFjqqjX1frJhfCb2gwRF5ucFOWVBbtnPgbSqPMVOkuU8ksN9Hre2XDpptUSUFg8Ph8pQaAirmbiwNSKnuswzsmvIXriI69k15Uok4lHMUoYURvlqtLg3zHAlglBs1KUJUWO.jpg";
+import spiceProductFour from "../assets/spieces/STJvq3R4Apb5uLoGPPmSIYK2PS0JZTOzIM9nb4axaTar8uk6PwoLQAec3OYlCUvGwRGqiLrC-rMvW2QfRNG9UtN35ib7rNbKfjYs5lam3OUW85igUGd4DcdbiEYQSO5CWhTPOWmVdBcfSWapI_o5wsBf4rR1C52_KIQwIA.jpg";
+import spiceCta from "../assets/spieces/Z7Epc-uXO9q4_E84yNiwd_BdvVwl6R9bXT5Pz-6VKQEqbkMDEac7rnUUtKhH3mscJeO9FLseLyVOvcoNVsHu8YheH7BLyRTRlLYGoafqCfHsdpe2PnWvso0tOFYOVuKR75jHM9fPRHb_Ygfve_EjABepzQXvE5yb9F1w3m.jpg";
 
 export default function Home() {
-  const heroSlides = [heroAgroOne, heroAgroTwo, "/images/exim1.jpg"];
+  const heroSlides = [spiceHeroOne, spiceHeroTwo, spiceProductThree];
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const aboutSectionRef = useRef<HTMLElement | null>(null);
@@ -172,10 +173,10 @@ export default function Home() {
 
           <div className="products-grid">
             {[
-              { title: "Spices", image: productSpices },
-              { title: "Red Chilli", image: productChilli },
-              { title: "Coconut & Coconut Products", image: "/images/exim1.jpg" },
-              { title: "Agro Products", image: heroAgroOne }
+              { title: "Spices", image: spiceProductOne },
+              { title: "Red Chilli", image: spiceProductTwo },
+              { title: "Agro Products", image: spiceProductThree },
+              { title: "Coconut", image: spiceProductFour }
             ].map((product, idx) => (
               <motion.article
                 key={product.title}
@@ -201,7 +202,7 @@ export default function Home() {
           <div className={`about-media ${aboutVisible ? "is-visible" : ""}`}>
             <div className="about-media-frame">
               <img
-                src={productSpices}
+                src={spiceProductOne}
                 alt="Export quality spices and agro products"
                 className="about-media-img"
               />
@@ -317,7 +318,7 @@ export default function Home() {
       </motion.section>
 
       <section className="cta-section">
-        <div className="cta-bg" style={{ backgroundImage: `url('${heroAgroTwo}')` }} />
+        <div className="cta-bg" style={{ backgroundImage: `url('${spiceCta}')` }} />
         <div className="cta-overlay" />
         <motion.div
           className="cta-content"
@@ -359,13 +360,13 @@ export default function Home() {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-blue-accent">
+                  <div className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-exim-green">
                     <Phone size={20} />
                   </div>
                   <div className="text-lg font-bold text-navy">+91 22 4567 8900</div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-blue-accent">
+                  <div className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-exim-green">
                     <Mail size={20} />
                   </div>
                   <div className="text-lg font-bold text-navy">contact@globallink.com</div>
@@ -376,11 +377,11 @@ export default function Home() {
             <div className="bg-white rounded-[12px] p-8 shadow-sm border border-slate-200">
               <form className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
-                  <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-accent" />
-                  <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-accent" />
+                  <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-exim-green" />
+                  <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-exim-green" />
                 </div>
-                <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-accent" />
-                <textarea rows={4} placeholder="Requirement Details..." className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-accent resize-none"></textarea>
+                <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-exim-green" />
+                <textarea rows={4} placeholder="Requirement Details..." className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-exim-green resize-none"></textarea>
                 <button type="submit" className="w-full btn-primary py-4 text-lg">
                   Submit Request
                 </button>
