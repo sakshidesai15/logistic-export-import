@@ -1,33 +1,28 @@
 import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import {
-  Truck,
   Globe,
-  ShieldCheck,
   Package,
-  Container,
-  FileCheck,
-  Phone,
-  Mail,
-  Network,
   Clock3,
   Handshake,
   Route,
-  Users2,
-  Factory,
-  ShoppingCart,
-  Pill,
-  Car,
-  Cog
+  BadgeCheck,
+  DollarSign,
+  Truck,
+  Ship,
+  Warehouse,
+  Phone,
+  Mail
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import heroAgroOne from "../assets/HERO BACKGROUND IMAGES/lT86O8Cs3jLDr65VDh0QLxdVekma0LtEYv8uh4ZTwyoqRKTv07IKrkP-Lm20_zM8kKcTJ0niDokOW9yRpCAdiPpvpgc5AvRQGcYi4ljWLMZyhGYhQ1is3_g5jN.jpg";
+import heroAgroTwo from "../assets/HERO BACKGROUND IMAGES/3H3Pk8-H6Djecz1zli8ckhX1fnDYtYHIejIOIGp6y5IJzhVBSliozrVHtXkWmqfJyBa9tZmBeLe5jL9aAThbaidMp4rrQiIS6cqdJ7cnz75AQjag_qC-vTxkv0gJkIwFUE1_deCTIVWpqjrRagepEIL.jpg";
+import productSpices from "../assets/exim/6Lui-U_6KuNrEbJHymYlyjHu8hhTGPrAkdmRJpb0Ck_auUkb5unnv2fMvrVMswrGM7P7qWcUqiBOnsv3XtSsLqLUpzOuDrNMP9coy-krOygBoXTyzewXXmg-ujwt8n7cdnCh1-5hxK2wQTtkqBMpW22XO3DCE.jpg";
+import productChilli from "../assets/exim/X6Xj-kS9SR6-CKO0bhd_OxtUtdMhqdNV3r6OiRwv3FKaqCQEPO-US-n9ocIfFtBxte8EOIS9NE8BqvJe5RGc5DYaJ45mDzxdX7dnrxV6S3voOTIw1zwMLY0Iz4AxOrQ7GeqQ462MOksQNjxWtoy5SiqFSOq-aASoEr-PG1i7g.jpg";
+
 export default function Home() {
-  const heroSlides = [
-    "/images/hero1.jpg",
-    "/images/hero2.jpg",
-    "/images/hero3.jpg"
-  ];
+  const heroSlides = [heroAgroOne, heroAgroTwo, "/images/exim1.jpg"];
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const aboutSectionRef = useRef<HTMLElement | null>(null);
@@ -145,17 +140,19 @@ export default function Home() {
         <div className="hero-overlay" />
 
         <div className="hero-content" key={currentSlide}>
-          <h1 className="hero-title">Global Logistics Solutions</h1>
+          <h1 className="hero-title">Premium Export of Spices & Agro Products</h1>
           <div className="hero-subtext-box">
-            <p className="hero-subtext">Seamlessly managing freight, transportation, and global trade</p>
+            <p className="hero-subtext">
+              We export high-quality spices, red chilli, coconut, and agricultural products to global markets with trust and reliability.
+            </p>
           </div>
           <div className="hero-buttons">
-            <Link to="/contact" className="hero-btn hero-btn-primary">
-              Get Quote
-            </Link>
-            <Link to="/services" className="hero-btn hero-btn-secondary">
-              Our Services
-            </Link>
+            <a href="#products" className="hero-btn hero-btn-primary">
+              Our Products
+            </a>
+            <a href="#services" className="hero-btn hero-btn-secondary">
+              Logistics Support
+            </a>
           </div>
         </div>
 
@@ -164,49 +161,38 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="split-card-section">
-        <div className="split-card-grid">
-          <Link to="/services" className="split-card-link">
-            <motion.article
-              initial={{ opacity: 0, y: 34 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="card split-card"
-            >
-              <img
-                src="/images/logistics1.jpg"
-                alt="Logistics transportation services"
-                className="split-card-media"
-              />
-              <div className="card-overlay" />
-              <div className="card-content">
-                <h3 className="card-title">Logistics Services</h3>
-                <p className="card-subtitle">Transportation, Freight, Warehousing</p>
-              </div>
-            </motion.article>
-          </Link>
+      <section id="products" className="products-section">
+        <div className="products-wrap">
+          <div className="products-header">
+            <h2 className="products-title">Our Products</h2>
+            <p className="products-subtitle">
+              Export-focused categories sourced and processed with strict quality standards for global buyers.
+            </p>
+          </div>
 
-          <Link to="/exim" className="split-card-link">
-            <motion.article
-              initial={{ opacity: 0, y: 34 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.7, ease: "easeOut", delay: 0.12 }}
-              className="card split-card"
-            >
-              <img
-                src="/images/exim1.jpg"
-                alt="Import export operations at international port"
-                className="split-card-media"
-              />
-              <div className="card-overlay" />
-              <div className="card-content">
-                <h3 className="card-title">Import & Export</h3>
-                <p className="card-subtitle">Documentation, Customs, Global Trade</p>
-              </div>
-            </motion.article>
-          </Link>
+          <div className="products-grid">
+            {[
+              { title: "Spices", image: productSpices },
+              { title: "Red Chilli", image: productChilli },
+              { title: "Coconut & Coconut Products", image: "/images/exim1.jpg" },
+              { title: "Agro Products", image: heroAgroOne }
+            ].map((product, idx) => (
+              <motion.article
+                key={product.title}
+                initial={{ opacity: 0, y: 32 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: idx * 0.08 }}
+                className="product-card"
+              >
+                <img src={product.image} alt={`${product.title} for export`} className="product-card-media" />
+                <div className="product-card-overlay" />
+                <div className="product-card-content">
+                  <h3 className="product-card-title">{product.title}</h3>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -215,18 +201,18 @@ export default function Home() {
           <div className={`about-media ${aboutVisible ? "is-visible" : ""}`}>
             <div className="about-media-frame">
               <img
-                src="/images/logistics1.jpg"
-                alt="Global logistics operations and transportation"
+                src={productSpices}
+                alt="Export quality spices and agro products"
                 className="about-media-img"
               />
             </div>
           </div>
 
           <div className={`about-content ${aboutVisible ? "is-visible" : ""}`}>
-            <div className="about-label">Our Story</div>
-            <h3 className="about-heading">Decades of Expertise in Global Logistics</h3>
+            <div className="about-label">About Us</div>
+            <h3 className="about-heading">Trusted Export Partner for Agro Products</h3>
             <p className="about-copy">
-              We provide reliable logistics and import-export solutions with a focus on efficiency, quality, and customer satisfaction. Our experience helps businesses grow in global markets.
+              We are a trusted exporter of high-quality agro products including spices, red chilli, and coconut. We serve global markets with a commitment to quality and timely delivery.
             </p>
             <Link to="/about" className="about-btn">
               Learn More
@@ -235,29 +221,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="services-grid-section">
+      <section id="services" className="logistics-support-section">
         <div className="services-grid-wrap">
           <div className="services-header">
-            <h2 className="services-title">Our Services</h2>
+            <h2 className="services-title">Logistics Support</h2>
             <p className="services-subtitle">
-              Comprehensive logistics and global trade solutions tailored to your business needs
+              We also provide logistics and transportation support to ensure smooth delivery of goods across locations.
             </p>
           </div>
-          <div className="services-grid">
+          <div className="services-grid services-grid-secondary">
             {[
-              { icon: <Truck size={24} />, title: "Road Transportation", desc: "Reliable cargo movement across domestic routes." },
-              { icon: <Globe size={24} />, title: "Freight Forwarding", desc: "Seamless air and sea freight coordination globally." },
-              { icon: <Package size={24} />, title: "Warehousing", desc: "Secure storage with efficient inventory handling." },
-              { icon: <ShieldCheck size={24} />, title: "Customs Clearance", desc: "Fast, compliant clearance for smooth border transit." },
-              { icon: <FileCheck size={24} />, title: "Import & Export Documentation", desc: "Accurate paperwork management for global shipments." },
-              { icon: <Network size={24} />, title: "Supply Chain Management", desc: "End-to-end planning for optimized trade operations." }
+              { icon: <Truck size={22} />, title: "Road Transportation", desc: "Timely inland cargo movement with dependable routing." },
+              { icon: <Ship size={22} />, title: "Freight Coordination", desc: "Efficient air and sea movement support for export orders." },
+              { icon: <Warehouse size={22} />, title: "Handling & Storage", desc: "Safe handling and interim storage before final dispatch." }
             ].map((service, idx) => (
               <motion.article
                 key={service.title}
-                initial={{ opacity: 0, y: 22 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: idx * 0.08 }}
+                transition={{ duration: 0.48, ease: "easeOut", delay: idx * 0.08 }}
                 className="service-card"
               >
                 <div className="service-icon">{service.icon}</div>
@@ -287,16 +270,16 @@ export default function Home() {
           >
             <h2 className="why-title">Why Choose Us</h2>
             <p className="why-subtitle">
-              We deliver reliable and efficient logistics and global trade solutions tailored to your business.
+              We focus on dependable product quality and consistent export fulfillment for long-term trade partnerships.
             </p>
 
             <div className="why-points">
               {[
-                { icon: <Clock3 size={18} />, title: "Reliable & Timely Delivery", desc: "Consistent schedules with dependable transit performance." },
-                { icon: <Globe size={18} />, title: "Global Network Coverage", desc: "Strong international partner network across key trade routes." },
-                { icon: <Users2 size={18} />, title: "Experienced Professionals", desc: "Skilled specialists managing every stage of shipment flow." },
-                { icon: <Route size={18} />, title: "End-to-End Logistics Support", desc: "Integrated handling from origin pickup to final destination." },
-                { icon: <Handshake size={18} />, title: "Customer-Centric Approach", desc: "Personalized solutions aligned with your business priorities." }
+                { icon: <BadgeCheck size={18} />, title: "Quality Products", desc: "Careful sourcing and quality checks for every shipment." },
+                { icon: <Globe size={18} />, title: "Global Export Network", desc: "Strong market reach supported by trusted global trade links." },
+                { icon: <Clock3 size={18} />, title: "Reliable Delivery", desc: "Planned dispatches and transit monitoring for on-time arrival." },
+                { icon: <DollarSign size={18} />, title: "Competitive Pricing", desc: "Value-driven pricing aligned with international buyer expectations." },
+                { icon: <Handshake size={18} />, title: "Customer Satisfaction", desc: "Responsive support and long-term relationship commitment." }
               ].map((point) => (
                 <div key={point.title} className="why-point-item">
                   <div className="why-point-icon">{point.icon}</div>
@@ -318,9 +301,9 @@ export default function Home() {
           >
             <div className="why-counters-grid">
               {[
-                { value: stats.shipments, label: "Shipments Delivered" },
-                { value: stats.clients, label: "Global Clients" },
-                { value: stats.team, label: "Team Members" },
+                { value: stats.shipments, label: "Export Shipments" },
+                { value: stats.clients, label: "Global Buyers" },
+                { value: stats.team, label: "Support Team" },
                 { value: stats.years, label: "Years Experience" }
               ].map((counter) => (
                 <div key={counter.label} className="counter-card">
@@ -333,41 +316,8 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <section className="industries-section">
-        <div className="industries-wrap">
-          <div className="industries-header">
-            <h2 className="industries-title">Industries We Serve</h2>
-            <p className="industries-subtitle">
-              Delivering tailored logistics and global trade solutions across multiple industries
-            </p>
-          </div>
-          <div className="industries-grid">
-            {[
-              { icon: <Factory size={22} />, label: "Manufacturing" },
-              { icon: <ShoppingCart size={22} />, label: "Retail & E-commerce" },
-              { icon: <Pill size={22} />, label: "Pharmaceuticals" },
-              { icon: <Car size={22} />, label: "Automotive" },
-              { icon: <Package size={22} />, label: "FMCG" },
-              { icon: <Cog size={22} />, label: "Industrial Goods" }
-            ].map((industry, idx) => (
-              <motion.article
-                key={industry.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, ease: "easeOut", delay: idx * 0.08 }}
-                className="industry-card"
-              >
-                <div className="industry-icon">{industry.icon}</div>
-                <h4 className="industry-label">{industry.label}</h4>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="cta-section">
-        <div className="cta-bg" style={{ backgroundImage: "url('/images/hero2.jpg')" }} />
+        <div className="cta-bg" style={{ backgroundImage: `url('${heroAgroTwo}')` }} />
         <div className="cta-overlay" />
         <motion.div
           className="cta-content"
@@ -376,9 +326,9 @@ export default function Home() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="cta-title">Looking for Reliable Logistics & Export Solutions?</h2>
+          <h2 className="cta-title">Looking for Trusted Export Solutions?</h2>
           <p className="cta-subtitle">
-            Contact us today for efficient and trusted global services
+            Contact us today for premium agro product exports with reliable coordination and delivery support.
           </p>
           <motion.div
             className="cta-buttons"
