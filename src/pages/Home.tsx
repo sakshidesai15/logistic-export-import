@@ -6,9 +6,6 @@ import {
   Handshake,
   BadgeCheck,
   DollarSign,
-  Truck,
-  Ship,
-  Warehouse,
   Phone,
   Mail
 } from "lucide-react";
@@ -144,16 +141,16 @@ export default function Home() {
           <h1 className="hero-title">Premium Export of Spices & Agro Products</h1>
           <div className="hero-subtext-box">
             <p className="hero-subtext">
-              We export high-quality spices, red chilli, coconut, and agricultural products to global markets with trust and reliability.
+              We deliver export-grade spices and agro products to global buyers with strict quality control, reliable documentation, and dependable fulfillment.
             </p>
           </div>
           <div className="hero-buttons">
             <a href="#products" className="hero-btn hero-btn-primary">
               Our Products
             </a>
-            <a href="#services" className="hero-btn hero-btn-secondary">
+            <Link to="/services" className="hero-btn hero-btn-logistics">
               Logistics Support
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -165,9 +162,10 @@ export default function Home() {
       <section id="products" className="products-section">
         <div className="products-wrap">
           <div className="products-header">
+            <div className="products-priority">Primary Focus (70%): Product Export</div>
             <h2 className="products-title">Our Products</h2>
             <p className="products-subtitle">
-              Export-focused categories sourced and processed with strict quality standards for global buyers.
+              Export-focused categories sourced, processed, and packed for consistent international quality.
             </p>
           </div>
 
@@ -213,42 +211,11 @@ export default function Home() {
             <div className="about-label">About Us</div>
             <h3 className="about-heading">Trusted Export Partner for Agro Products</h3>
             <p className="about-copy">
-              We are a trusted exporter of high-quality agro products including spices, red chilli, and coconut. We serve global markets with a commitment to quality and timely delivery.
+              We are a trusted exporter of high-quality agro products including spices, red chilli, and coconut. Our team is built for long-term export partnerships with quality consistency and on-time delivery.
             </p>
             <Link to="/about" className="about-btn">
               Learn More
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" className="logistics-support-section">
-        <div className="services-grid-wrap">
-          <div className="services-header">
-            <h2 className="services-title">Logistics Support</h2>
-            <p className="services-subtitle">
-              We also provide logistics and transportation support to ensure smooth delivery of goods across locations.
-            </p>
-          </div>
-          <div className="services-grid services-grid-secondary">
-            {[
-              { icon: <Truck size={22} />, title: "Road Transportation", desc: "Timely inland cargo movement with dependable routing." },
-              { icon: <Ship size={22} />, title: "Freight Coordination", desc: "Efficient air and sea movement support for export orders." },
-              { icon: <Warehouse size={22} />, title: "Handling & Storage", desc: "Safe handling and interim storage before final dispatch." }
-            ].map((service, idx) => (
-              <motion.article
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.48, ease: "easeOut", delay: idx * 0.08 }}
-                className="service-card"
-              >
-                <div className="service-icon">{service.icon}</div>
-                <h4 className="service-title">{service.title}</h4>
-                <p className="service-desc">{service.desc}</p>
-              </motion.article>
-            ))}
           </div>
         </div>
       </section>
@@ -329,7 +296,7 @@ export default function Home() {
         >
           <h2 className="cta-title">Looking for Trusted Export Solutions?</h2>
           <p className="cta-subtitle">
-            Contact us today for premium agro product exports with reliable coordination and delivery support.
+            Contact us for premium agro product exports. Logistics services remain available as a secondary support layer.
           </p>
           <motion.div
             className="cta-buttons"
@@ -353,9 +320,9 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-20">
             <div>
               <div className="badge-styled">Contact Us</div>
-              <h3 className="text-4xl font-extrabold text-navy mb-8">Ready to move your business forward?</h3>
+              <h3 className="text-4xl font-extrabold text-navy mb-8">Ready to grow your export business?</h3>
               <p className="text-lg text-slate-500 mb-12">
-                Have questions or need a personalized quote? Our expert team is ready to assist you.
+                Share your requirement for product export or logistics support, and our team will get back with a focused plan.
               </p>
 
               <div className="space-y-6">
@@ -369,7 +336,7 @@ export default function Home() {
                   <div className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-exim-green">
                     <Mail size={20} />
                   </div>
-                  <div className="text-lg font-bold text-navy">contact@globallink.com</div>
+                  <div className="text-lg font-bold text-navy">contact@satyanandexim.com</div>
                 </div>
               </div>
             </div>
@@ -381,6 +348,11 @@ export default function Home() {
                   <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-exim-green" />
                 </div>
                 <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-exim-green" />
+                <select className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-exim-green bg-white">
+                  <option value="">Service Type</option>
+                  <option>Export</option>
+                  <option>Logistics</option>
+                </select>
                 <textarea rows={4} placeholder="Requirement Details..." className="w-full px-4 py-3 rounded-[6px] border border-slate-200 focus:outline-none focus:ring-1 focus:ring-exim-green resize-none"></textarea>
                 <button type="submit" className="w-full btn-primary py-4 text-lg">
                   Submit Request
