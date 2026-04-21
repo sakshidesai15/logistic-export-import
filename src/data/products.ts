@@ -17,7 +17,7 @@ export type Product = {
   applications: string[];
 };
 
-import chilliImage from "../assets/spieces/6etXiCWjwUBnrPCxsBI5WSa8gnfrPW3rQ5NU5ysTFFKE6XCm58HM-91nPH3FMDf4jyQ1ulI7FZBDtIj1BJMhRSUrKVUMYj-fgEj_-3AsXfFRJtmgI50-oCDNQZEeLwA9ybv0uFEvNDShArJvoVLG7Pro_8hmpIA-z25iMP.jpg";
+import chilliImage from "../assets/chilli1.jpg";
 import coconutImage from "../assets/spieces/STJvq3R4Apb5uLoGPPmSIYK2PS0JZTOzIM9nb4axaTar8uk6PwoLQAec3OYlCUvGwRGqiLrC-rMvW2QfRNG9UtN35ib7rNbKfjYs5lam3OUW85igUGd4DcdbiEYQSO5CWhTPOWmVdBcfSWapI_o5wsBf4rR1C52_KIQwIA.jpg";
 import spicesImage from "../assets/spieces/G0ZYH814Pv6GkccL5v0vQrpkEzgkThUyu8Js1wOYxU0KJxvtfnVQ6OBrcp5ncHIXo3I_rERgV8x5R9wP7iUxIJwD1RMErhj1asAtdrnoc6VZO8DLkCfJYEP40DtsaGnlJN036bjZcX06IugtQsvHJygah0QieG91DZtoJU.jpg";
 import turmericImage from "../assets/turmeric2.jpg";

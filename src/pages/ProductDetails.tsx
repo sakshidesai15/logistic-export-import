@@ -40,6 +40,13 @@ export default function ProductDetails() {
     ...(product.whyBuy?.slice(0, 2) ?? [])
   ])).slice(0, 3);
   const heroBadges = ["Export Grade", "High Purity", "Premium Quality"];
+  const heroImagePosition: Record<string, string> = {
+    turmeric: "center 74%",
+    "red-chilli": "center 48%",
+    coconut: "center 42%",
+    spices: "center 50%",
+    "black-pepper": "center 50%"
+  };
 
   return (
     <div className="products-catalog-page">
@@ -50,7 +57,12 @@ export default function ProductDetails() {
           </div>
 
           <article className="product-hero-premium">
-            <img src={product.image} alt={product.name} className="product-hero-image" />
+            <img
+              src={product.image}
+              alt={product.name}
+              className="product-hero-image"
+              style={{ objectPosition: heroImagePosition[product.id] ?? "center 50%" }}
+            />
             <div className="product-hero-overlay" />
             <div className="product-hero-content-layer">
               <div className="catalog-detail-topline on-hero">{product.category}</div>

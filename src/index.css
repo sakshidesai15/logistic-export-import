@@ -501,7 +501,8 @@
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  min-height: clamp(260px, 42vh, 360px);
+  min-height: 0;
+  aspect-ratio: 16 / 7;
   border: 1px solid rgba(47, 133, 90, 0.2);
   box-shadow: 0 16px 34px rgba(15, 23, 42, 0.16);
   margin-bottom: 0.95rem;
@@ -510,7 +511,7 @@
 .product-hero-image {
   width: 100%;
   height: 100%;
-  min-height: clamp(260px, 42vh, 360px);
+  min-height: 100%;
   object-fit: cover;
   object-position: center 74%;
   display: block;
@@ -782,19 +783,40 @@
 
 .catalog-profile-top {
   display: grid;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: 180px 1fr;
 }
 
 .catalog-detail-image {
   width: 100%;
   height: 100%;
-  min-height: 190px;
+  min-height: 160px;
   object-fit: cover;
+  object-position: center center;
   transition: transform 0.5s ease;
+}
+
+.catalog-detail-image.is-red-chilli,
+.catalog-detail-image.is-coconut {
+  object-fit: cover;
+  background: transparent;
+  padding: 0;
+}
+
+.catalog-detail-image.is-red-chilli {
+  object-position: center 35%;
+}
+
+.catalog-detail-image.is-coconut {
+  object-position: center 28%;
 }
 
 .catalog-detail-card:hover .catalog-detail-image {
   transform: scale(1.04);
+}
+
+.catalog-detail-card:hover .catalog-detail-image.is-red-chilli,
+.catalog-detail-card:hover .catalog-detail-image.is-coconut {
+  transform: scale(1.02);
 }
 
 .catalog-detail-body {
@@ -2063,11 +2085,11 @@
 
 @media (max-width: 768px) {
   .product-hero-premium {
-    min-height: clamp(220px, 38vh, 290px);
+    aspect-ratio: 4 / 3;
   }
 
   .product-hero-image {
-    min-height: clamp(220px, 38vh, 290px);
+    min-height: 100%;
     object-position: center 62%;
   }
 

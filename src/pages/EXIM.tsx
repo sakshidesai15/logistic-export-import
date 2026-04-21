@@ -34,7 +34,17 @@ export default function EXIM() {
             {products.map((product) => (
               <article key={product.id} className="catalog-detail-card">
                 <div className="catalog-profile-top">
-                  <img src={product.image} alt={`${product.name} export`} className="catalog-detail-image" />
+                  <img
+                    src={product.image}
+                    alt={`${product.name} export`}
+                    className={`catalog-detail-image ${
+                      product.id === "red-chilli"
+                        ? "is-red-chilli"
+                        : product.id === "coconut"
+                          ? "is-coconut"
+                          : ""
+                    }`}
+                  />
                   <div className="catalog-detail-body">
                     <div className="catalog-detail-topline">{product.category}</div>
                     <h3>{product.productTitle}</h3>
