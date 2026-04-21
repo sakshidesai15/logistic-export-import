@@ -1,6 +1,7 @@
 import {
   Phone,
   Mail,
+  MapPin,
   Menu,
   X
 } from "lucide-react";
@@ -87,18 +88,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="bg-[#103146] text-white py-2 px-4 sm:px-10 flex justify-between text-[12px] font-medium hidden sm:flex border-b border-white/10">
         <div className="flex gap-6">
           <span className="flex items-center gap-2">
-            <Phone size={14} className="text-exim-green" /> +91 22 4567 8900
+            <Phone size={14} className="text-exim-green" /> +91 7348967849
           </span>
           <span className="flex items-center gap-2">
-            <Mail size={14} className="text-exim-green" /> contact@satyanandexim.com
+            <Mail size={14} className="text-exim-green" /> vsatyanand71@gmail.com
           </span>
         </div>
         <div className="flex gap-4 opacity-80">
-          <span>Andhra Pradesh</span>
-          <span>|</span>
-          <span>Hyderabad</span>
-          <span>|</span>
-          <span>Pan India Delivery</span>
+          <span>Kakinada, Andhra Pradesh, India</span>
         </div>
       </div>
 
@@ -200,8 +197,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/services" className="hover:text-exim-green">Logistics Support</Link>
             <Link to="/contact" className="hover:text-exim-green">Contact</Link>
           </div>
-          <div className="text-slate-400 text-[11px] font-bold uppercase tracking-widest">
-            (C) 2026 Satyanand Exim. Export Products + Logistics Support.
+          <div className="text-slate-500 text-xs font-semibold space-y-1">
+            <div className="flex items-center gap-2">
+              <Phone size={14} className="text-exim-green" /> +91 7348967849
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail size={14} className="text-exim-green" /> vsatyanand71@gmail.com
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin size={14} className="text-exim-green" /> Andhra Pradesh, India
+            </div>
           </div>
         </div>
       </footer>

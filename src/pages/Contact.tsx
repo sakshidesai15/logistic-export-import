@@ -15,14 +15,17 @@ export default function Contact() {
         <p className="text-white/75 text-lg max-w-2xl mx-auto">
           Contact us for export-focused product requirements. Logistics support is also available as a secondary service.
         </p>
+        <p className="text-white/90 text-base md:text-lg font-semibold mt-4">
+          Satyanand Exim Logistics Pvt Ltd
+        </p>
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-10 -mt-10">
         <div className="grid lg:grid-cols-3 gap-8">
           {[
-            { icon: <Phone size={24} />, title: "Call Us", details: "+91 22 4567 8900", sub: "Export Desk Support" },
-            { icon: <Mail size={24} />, title: "Email Us", details: "contact@satyanandexim.com", sub: "Response within 2 hours" },
-            { icon: <MapPin size={24} />, title: "Visit Us", details: "Hyderabad & Andhra Pradesh", sub: "Operations Presence" }
+            { icon: <Phone size={24} />, title: "Phone", details: "+91 7348967849", sub: "Satyanand Exim Logistics Pvt Ltd" },
+            { icon: <Mail size={24} />, title: "Email", details: "vsatyanand71@gmail.com", sub: "Business Contact" },
+            { icon: <MapPin size={24} />, title: "Location", details: "Kakinada, Andhra Pradesh, India", sub: "Operations Base" }
           ].map((item, i) => (
             <motion.div
               key={i}
