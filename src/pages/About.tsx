@@ -20,7 +20,7 @@ export default function About() {
         <div className="relative z-10">
           <h1 className="text-4xl md:text-6xl font-black text-white mb-6">About SATYANAND EXIM</h1>
           <p className="text-white/80 text-lg max-w-3xl mx-auto">
-            We are an export-focused company delivering premium spices and agro products, with reliable logistics support for import, export, and domestic movement.
+            India is known as the Land of Spices, and we continue that legacy through authentic sourcing, export-grade quality control, and dependable global trade execution.
           </p>
         </div>
       </section>
@@ -29,20 +29,20 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
             <div className="badge-styled">Our Story</div>
-            <h2 className="text-4xl font-black text-navy mb-8">Healthy Spice Composition, Trusted Global Delivery</h2>
+            <h2 className="text-4xl font-black text-navy mb-8">From Indian Farms to Global Markets</h2>
             <p className="text-lg text-slate-500 mb-8 leading-relaxed">
-              SATYANAND EXIM is built around one clear purpose: supply quality spices and agro products that support healthy lifestyles and long-term buyer trust. Alongside product exports, we provide dependable logistics support so consignments move smoothly across borders and within India.
+              SATYANAND EXIM is built to deliver authentic Indian spices and agro products with strong flavor, aroma, and purity. We source directly from trusted farming regions, apply strict quality checks, and support reliable export movement for long-term buyer confidence.
             </p>
             <div className="grid grid-cols-2 gap-8">
               <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                 <Target size={32} className="text-exim-green mb-4" />
                 <h4 className="font-bold text-navy mb-2">Our Mission</h4>
-                <p className="text-sm text-slate-500">Deliver healthy, export-grade spice and agro products with consistent quality.</p>
+                <p className="text-sm text-slate-500">Deliver premium, export-grade Indian spices and agro products with consistent quality and traceability.</p>
               </div>
               <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                 <TrendingUp size={32} className="text-exim-green mb-4" />
                 <h4 className="font-bold text-navy mb-2">Our Vision</h4>
-                <p className="text-sm text-slate-500">Become a preferred global partner for Indian agro exports and support logistics.</p>
+                <p className="text-sm text-slate-500">Be a trusted global partner for Indian spice excellence and reliable export fulfillment.</p>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function Contact() {
       <section className="bg-navy py-20 px-4 sm:px-10 text-center">
         <h1 className="text-4xl md:text-6xl font-black text-white mb-6">Connect With SATYANAND EXIM</h1>
         <p className="text-white/75 text-lg max-w-2xl mx-auto">
-          Contact us for export-focused product requirements. Logistics support is also available as a secondary service.
+          Contact us for authentic Indian spice export requirements, premium quality specifications, and dependable global shipment support.
         </p>
         <p className="text-white/90 text-base md:text-lg font-semibold mt-4">
           Satyanand Exim Logistics Pvt Ltd
@@ -68,7 +68,7 @@ export default function Contact() {
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Your Message</label>
-                <textarea rows={6} className="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-exim-green focus:border-transparent outline-none transition-all resize-none" placeholder="Tell us about your export product or logistics requirement..."></textarea>
+                <textarea rows={6} className="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-exim-green focus:border-transparent outline-none transition-all resize-none" placeholder="Share product, quantity, destination market, and quality requirements..."></textarea>
               </div>
               <button className="w-full btn-primary py-5 rounded-xl text-lg flex items-center justify-center gap-3 bg-exim-green hover:bg-green-700 border-none">
                 Send Request <ArrowRight size={20} />

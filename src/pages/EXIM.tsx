@@ -14,9 +14,9 @@ export default function EXIM() {
         <div className="catalog-hero-overlay" />
         <div className="catalog-hero-content">
           <h1>Our Products</h1>
-          <p>Premium Quality Spices and Coconut Products for Global Export</p>
+          <p>Authentic Indian spices and coconut products with premium export quality, purity, and reliable global supply support.</p>
           <div className="catalog-badges">
-            <span><Award size={15} /> Export Quality</span>
+            <span><Award size={15} /> India’s Authentic Spice Excellence</span>
             <span><PackageCheck size={15} /> Premium Grade</span>
             <span><MapPin size={15} /> Sourced from India</span>
           </div>
@@ -27,7 +27,7 @@ export default function EXIM() {
         <div className="catalog-content-wrap">
           <div className="catalog-section-head">
             <h2>Our Products</h2>
-            <p>Explore our export-ready product range with full details and quotation support.</p>
+            <p>Explore export-ready products with traceable sourcing, tested purity, and strong flavor performance for global B2B buyers.</p>
           </div>
 
           <div className="catalog-product-detail-grid">
@@ -68,7 +68,7 @@ export default function EXIM() {
               <div className="secondary-badge">Secondary Support</div>
               <h3>Logistics Assistance Available</h3>
               <p>
-                We also support documentation and shipment coordination so your product consignments move smoothly after production and quality clearance.
+                We also support documentation and shipment coordination to ensure consistent supply and smooth movement after quality clearance.
               </p>
             </div>
             <div className="secondary-icons">

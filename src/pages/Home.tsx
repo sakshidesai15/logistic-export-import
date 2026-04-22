@@ -138,10 +138,10 @@ export default function Home() {
         <div className="hero-overlay" />
 
         <div className="hero-content" key={currentSlide}>
-          <h1 className="hero-title">Premium Export of Spices & Agro Products</h1>
+          <h1 className="hero-title">Bringing India’s Authentic Spice Heritage to the World</h1>
           <div className="hero-subtext-box">
             <p className="hero-subtext">
-              We deliver export-grade spices and agro products to global buyers with strict quality control, reliable documentation, and dependable fulfillment.
+              India has led the global spice trade for centuries. We continue this legacy with direct sourcing from trusted farming regions, export-grade quality control, and consistent fulfillment for international buyers.
             </p>
           </div>
           <div className="hero-buttons">
@@ -165,7 +165,7 @@ export default function Home() {
             <div className="products-priority">Primary Focus (70%): Product Export</div>
             <h2 className="products-title">Our Products</h2>
             <p className="products-subtitle">
-              Export-focused categories sourced, processed, and packed for consistent international quality.
+              Premium spices and agro products sourced directly from Indian farming regions and prepared for consistent global trade standards.
             </p>
           </div>
 
@@ -208,14 +208,55 @@ export default function Home() {
           </div>
 
           <div className={`about-content ${aboutVisible ? "is-visible" : ""}`}>
-            <div className="about-label">About Us</div>
-            <h3 className="about-heading">Trusted Export Partner for Agro Products</h3>
+            <div className="about-label">India’s Authentic Spice Excellence</div>
+            <h3 className="about-heading">Trusted Indian Spice Export Partner</h3>
             <p className="about-copy">
-              We are a trusted exporter of high-quality agro products including spices, red chilli, and coconut. Our team is built for long-term export partnerships with quality consistency and on-time delivery.
+              India is known as the Land of Spices, with a rich history of global trade. We carry this heritage forward through authentic sourcing, strong flavor and aroma retention, strict quality standards, and reliable shipment support.
             </p>
             <Link to="/about" className="about-btn">
               Learn More
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="strengths-section">
+        <div className="strengths-wrap">
+          <div className="strengths-header">
+            <h2 className="strengths-title">Our Strengths</h2>
+            <p className="strengths-subtitle">
+              From Indian Farms to Global Markets
+            </p>
+          </div>
+
+          <div className="strengths-grid">
+            {[
+              {
+                title: "Rich Heritage",
+                desc: "Traditional farming and processing methods passed through generations."
+              },
+              {
+                title: "Product Diversity",
+                desc: "Wide range including turmeric, black pepper, red chilli, coconut, and spices."
+              },
+              {
+                title: "Premium Quality",
+                desc: "Export-grade, high-purity, and tested products for international buyers."
+              },
+              {
+                title: "Sustainability",
+                desc: "Eco-friendly sourcing practices with continued support for farming communities."
+              },
+              {
+                title: "Value-Added Products",
+                desc: "Spice powders, blends, and processed goods tailored for market needs."
+              }
+            ].map((item) => (
+              <article key={item.title} className="strength-card">
+                <h3 className="strength-card-title">{item.title}</h3>
+                <p className="strength-card-desc">{item.desc}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -238,16 +279,16 @@ export default function Home() {
           >
             <h2 className="why-title">Why Choose Us</h2>
             <p className="why-subtitle">
-              We focus on dependable product quality and consistent export fulfillment for long-term trade partnerships.
+              We deliver authentic Indian spices with premium export quality, dependable logistics support, and long-term trade reliability.
             </p>
 
             <div className="why-points">
               {[
-                { icon: <BadgeCheck size={18} />, title: "Quality Products", desc: "Careful sourcing and quality checks for every shipment." },
-                { icon: <Globe size={18} />, title: "Global Export Network", desc: "Strong market reach supported by trusted global trade links." },
-                { icon: <Clock3 size={18} />, title: "Reliable Delivery", desc: "Planned dispatches and transit monitoring for on-time arrival." },
-                { icon: <DollarSign size={18} />, title: "Competitive Pricing", desc: "Value-driven pricing aligned with international buyer expectations." },
-                { icon: <Handshake size={18} />, title: "Customer Satisfaction", desc: "Responsive support and long-term relationship commitment." }
+                { icon: <Globe size={18} />, title: "Authentic Indian Origin", desc: "Direct sourcing from trusted Indian farming regions." },
+                { icon: <BadgeCheck size={18} />, title: "Premium Export Quality", desc: "Strict quality control aligned with international standards." },
+                { icon: <Handshake size={18} />, title: "Natural & Sustainable Products", desc: "Responsible sourcing with a focus on purity and sustainability." },
+                { icon: <DollarSign size={18} />, title: "Strong Flavor & Potency", desc: "Authentic aroma, flavor intensity, and high product consistency." },
+                { icon: <Clock3 size={18} />, title: "Reliable Supply & Logistics Support", desc: "Steady shipment planning, documentation, and transit coordination." }
               ].map((point) => (
                 <div key={point.title} className="why-point-item">
                   <div className="why-point-icon">{point.icon}</div>
@@ -294,9 +335,9 @@ export default function Home() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="cta-title">Looking for Trusted Export Solutions?</h2>
+          <h2 className="cta-title">Nature’s Bounty, Pure & Potent</h2>
           <p className="cta-subtitle">
-            Contact us for premium agro product exports. Logistics services remain available as a secondary support layer.
+            Partner with us for authentic Indian spices and agro products backed by export-grade quality, purity, and dependable global supply support.
           </p>
           <motion.div
             className="cta-buttons"
@@ -322,7 +363,7 @@ export default function Home() {
               <div className="badge-styled">Contact Us</div>
               <h3 className="text-4xl font-extrabold text-navy mb-8">Ready to grow your export business?</h3>
               <p className="text-lg text-slate-500 mb-12">
-                Share your requirement for product export or logistics support, and our team will get back with a focused plan.
+                Share your spice export requirements and destination markets. Our team will provide a clear plan with product options, quality details, and shipment support.
               </p>
 
               <div className="space-y-6">

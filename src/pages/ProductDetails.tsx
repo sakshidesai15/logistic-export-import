@@ -30,16 +30,16 @@ export default function ProductDetails() {
       : ["Export Grade", "Consistent Supply", "Global Market Ready"];
 
   const trustIndicators = [
-    product.sourcingRegions[0] ? `Region: ${product.sourcingRegions[0]}` : "Sourced from India",
-    "Strict quality checks",
-    "Export-ready dispatch"
+    product.sourcingRegions[0] ? `Region: ${product.sourcingRegions[0]}` : "Authentic Indian origin",
+    "Strict export quality checks",
+    "Reliable supply and dispatch"
   ];
 
   const quickHighlights = Array.from(new Set([
     ...(product.quality?.slice(0, 2) ?? []),
     ...(product.whyBuy?.slice(0, 2) ?? [])
   ])).slice(0, 3);
-  const heroBadges = ["Export Grade", "High Purity", "Premium Quality"];
+  const heroBadges = ["Authentic Indian Origin", "Premium Export Quality", "High Purity"];
   const heroImagePosition: Record<string, string> = {
     turmeric: "center 74%",
     "red-chilli": "center 48%",
@@ -105,7 +105,7 @@ export default function ProductDetails() {
 
           <div className="catalog-section-head left product-sections-title">
             <h2>Product Specifications</h2>
-            <p>Clear, export-focused details organized for quick buyer review.</p>
+            <p>Clear export-focused details covering quality, sourcing, purity, and market readiness.</p>
           </div>
 
           <article className="catalog-detail-card is-expanded">
@@ -184,7 +184,7 @@ export default function ProductDetails() {
 
           <section className="product-bottom-cta">
             <h3>Ready to discuss your export requirement?</h3>
-            <p>Our team can share product specifications, packing options, and shipment support based on your market needs.</p>
+            <p>Our team can share product specifications, packing options, and shipment support aligned with your destination market requirements.</p>
             <div className="product-detail-cta">
               <Link className="catalog-action-link" to={`/contact?product=${product.id}`}>Request Quote</Link>
               <Link className="catalog-action-link alt" to="/contact">Contact</Link>
