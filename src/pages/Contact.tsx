@@ -23,8 +23,8 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-10 -mt-10">
         <div className="grid lg:grid-cols-3 gap-8">
           {[
-            { icon: <Phone size={24} />, title: "Phone", details: "+91 7348967849", sub: "Satyanand Exim Logistics Pvt Ltd" },
-            { icon: <Mail size={24} />, title: "Email", details: "vsatyanand71@gmail.com", sub: "Business Contact" },
+            { icon: <Phone size={24} />, title: "Phone", details: "+91 22 4567 8900", sub: "Business Contact" },
+            { icon: <Mail size={24} />, title: "Email", details: "contact@satyanandexim.com", sub: "Business Contact" },
             { icon: <MapPin size={24} />, title: "Location", details: "Kakinada, Andhra Pradesh, India", sub: "Operations Base" }
           ].map((item, i) => (
             <motion.div
