@@ -364,7 +364,7 @@ export default function Home() {
                 Share your spice export requirements and destination markets. Our team will provide a clear plan with product options, quality details, and shipment support.
               </p>
 
-              <div className="space-y-8 max-w-3xl">
+              <div className="space-y-6 max-w-2xl">
                 {[
                   {
                     icon: <Phone size={24} />,
@@ -381,17 +381,17 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex items-start gap-5"
+                    className="flex items-start gap-4"
                   >
-                    <div className="w-14 h-14 shrink-0 bg-white border border-slate-200 rounded-[14px] flex items-center justify-center text-exim-green shadow-sm">
+                    <div className="w-11 h-11 shrink-0 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-exim-green shadow-sm">
                       {item.icon}
                     </div>
-                    <div className="pt-2">
-                      <div className="text-[0.7rem] font-black uppercase tracking-[0.34em] text-slate-500 mb-3">{item.label}</div>
-                      <div className="text-[1.55rem] leading-tight font-black text-navy max-w-2xl break-words">
+                    <div className="pt-1">
+                      <div className="text-[0.62rem] font-black uppercase tracking-[0.32em] text-slate-500 mb-2">{item.label}</div>
+                      <div className="text-[1.05rem] md:text-[1.15rem] leading-tight font-extrabold text-navy max-w-2xl break-words">
                         {item.value}
                       </div>
-                      <p className="text-sm text-slate-400 mt-3">{item.subtext}</p>
+                      <p className="text-[0.72rem] md:text-sm text-slate-400 mt-2">{item.subtext}</p>
                     </div>
                   </div>
                 ))}
