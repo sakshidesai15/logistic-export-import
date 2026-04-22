@@ -11,12 +11,12 @@ export default function Contact() {
   return (
     <div className="bg-white pb-24">
       <section className="bg-navy py-20 px-4 sm:px-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-black text-white mb-6">Connect With SATYANAND EXIM</h1>
+        <h1 className="text-4xl md:text-6xl font-black text-white mb-6">Connect With Satyanand Exim Logistics OPC Private Limited</h1>
         <p className="text-white/75 text-lg max-w-2xl mx-auto">
           Contact us for heritage-led Indian spices, premium quality specifications, and dependable global shipment support.
         </p>
         <p className="text-white/90 text-base md:text-lg font-semibold mt-4">
-          Satyanand Exim Logistics Pvt Ltd
+          Satyanand Exim Logistics OPC Private Limited
         </p>
       </section>
 

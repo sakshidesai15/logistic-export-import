@@ -18,7 +18,7 @@ export default function About() {
           <img src={spiceHero} alt="Spices and agro products" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6">About SATYANAND EXIM</h1>
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-6">About Satyanand Exim Logistics OPC Private Limited</h1>
           <p className="text-white/80 text-lg max-w-3xl mx-auto">
             India is known as the Land of Spices, and we continue that legacy with heritage-led sourcing, export-grade quality control, and dependable global trade execution.
           </p>
@@ -31,7 +31,7 @@ export default function About() {
             <div className="badge-styled">Our Story</div>
             <h2 className="text-4xl font-black text-navy mb-8">India's Spice Heritage, Delivered Worldwide</h2>
             <p className="text-lg text-slate-500 mb-8 leading-relaxed">
-              SATYANAND EXIM is built to deliver authentic Indian spices and agro products with strong flavor, aroma, and purity. We source directly from trusted farming regions, apply strict quality checks, and support reliable export movement for long-term buyer confidence.
+              Satyanand Exim Logistics OPC Private Limited is built to deliver authentic Indian spices and agro products with strong flavor, aroma, and purity. We source directly from trusted farming regions, apply strict quality checks, and support reliable export movement for long-term buyer confidence.
             </p>
             <div className="grid grid-cols-2 gap-8">
               <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">

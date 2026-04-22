@@ -86,7 +86,7 @@ export default function Tracking() {
                   { status: "In Transit", location: "Domestic Transport Route", time: "Apr 20, 10:20 AM", done: false, active: true },
                   { status: "Departed from Origin Facility", location: "AP Processing Unit", time: "Apr 19, 04:30 PM", done: true },
                   { status: "Dispatch Documentation Verified", location: "Export Desk", time: "Apr 19, 11:00 AM", done: true },
-                  { status: "Shipment Booked", location: "SATYANAND EXIM", time: "Apr 18, 09:00 AM", done: true }
+                  { status: "Shipment Booked", location: "Satyanand Exim Logistics OPC Private Limited", time: "Apr 18, 09:00 AM", done: true }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-6 relative">
                     <div className={`w-6 h-6 rounded-full border-4 border-white shadow-md flex-shrink-0 z-10 ${step.done ? "bg-exim-green" : step.active ? "bg-exim-green ring-4 ring-exim-green/20" : "bg-slate-200"}`} />

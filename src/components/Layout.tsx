@@ -102,9 +102,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "top-0 bg-white/92 backdrop-blur-md shadow-lg py-2" : "top-0 sm:top-[36px] bg-white py-4"} border-b border-slate-100 px-4 sm:px-10`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
-            <img src="/logo-satyanand-exim.svg" alt="Satyanand Exim logo" className="w-10 h-10" />
+            <img src="/logo-satyanand-exim.svg" alt="Satyanand Exim Logistics OPC Private Limited logo" className="w-10 h-10" />
             <div className="text-2xl font-bold text-[#0F2B46] tracking-tight flex items-center">
-              SATYANAND <span className="text-exim-green ml-1">EXIM</span>
+              Satyanand Exim <span className="text-exim-green ml-1">Logistics OPC Private Limited</span>
             </div>
           </Link>
 
@@ -189,8 +189,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <footer className="bg-white py-12 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <Link to="/" className="text-xl font-bold text-navy tracking-tight flex items-center gap-2">
-            <img src="/logo-satyanand-exim.svg" alt="Satyanand Exim logo" className="w-7 h-7" />
-            SATYANAND <span className="text-exim-green ml-1">EXIM</span>
+            <img src="/logo-satyanand-exim.svg" alt="Satyanand Exim Logistics OPC Private Limited logo" className="w-7 h-7" />
+            Satyanand Exim <span className="text-exim-green ml-1">Logistics OPC Private Limited</span>
           </Link>
           <div className="flex gap-8 text-[12px] font-bold text-slate-500 uppercase tracking-widest">
             <Link to="/exim" className="hover:text-exim-green">Products</Link>
