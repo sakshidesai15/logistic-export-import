@@ -103,8 +103,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
             <img src="/logo-satyanand-exim.svg" alt="Satyanand Exim Logistics OPC Private Limited logo" className="w-10 h-10" />
-            <div className="text-2xl font-bold text-[#0F2B46] tracking-tight flex items-center">
-              Satyanand Exim <span className="text-exim-green ml-1">Logistics OPC Private Limited</span>
+            <div className="flex flex-col leading-tight tracking-tight">
+              <span className="text-[1.08rem] sm:text-2xl font-bold text-[#0F2B46]">
+                Satyanand Exim
+              </span>
+              <span className="text-[0.72rem] sm:text-sm font-semibold text-exim-green uppercase tracking-[0.22em]">
+                Logistics OPC Private Limited
+              </span>
             </div>
           </Link>
 
@@ -190,7 +195,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <Link to="/" className="text-xl font-bold text-navy tracking-tight flex items-center gap-2">
             <img src="/logo-satyanand-exim.svg" alt="Satyanand Exim Logistics OPC Private Limited logo" className="w-7 h-7" />
-            Satyanand Exim <span className="text-exim-green ml-1">Logistics OPC Private Limited</span>
+            <span className="flex flex-col leading-tight">
+              <span className="text-sm sm:text-base text-navy">Satyanand Exim</span>
+              <span className="text-[0.62rem] sm:text-[0.72rem] font-semibold text-exim-green uppercase tracking-[0.18em]">
+                Logistics OPC Private Limited
+              </span>
+            </span>
           </Link>
           <div className="flex gap-8 text-[12px] font-bold text-slate-500 uppercase tracking-widest">
             <Link to="/exim" className="hover:text-exim-green">Products</Link>
