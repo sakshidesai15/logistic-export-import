@@ -364,19 +364,37 @@ export default function Home() {
                 Share your spice export requirements and destination markets. Our team will provide a clear plan with product options, quality details, and shipment support.
               </p>
 
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-exim-green">
-                    <Phone size={20} />
+              <div className="space-y-8 max-w-3xl">
+                {[
+                  {
+                    icon: <Phone size={24} />,
+                    label: "Phone",
+                    value: "+91 22 4567 8900",
+                    subtext: "Business Contact"
+                  },
+                  {
+                    icon: <Mail size={24} />,
+                    label: "Email",
+                    value: "contact@satyanandexim.com",
+                    subtext: "Business Contact"
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-start gap-5"
+                  >
+                    <div className="w-14 h-14 shrink-0 bg-white border border-slate-200 rounded-[14px] flex items-center justify-center text-exim-green shadow-sm">
+                      {item.icon}
+                    </div>
+                    <div className="pt-2">
+                      <div className="text-[0.7rem] font-black uppercase tracking-[0.34em] text-slate-500 mb-3">{item.label}</div>
+                      <div className="text-[1.55rem] leading-tight font-black text-navy max-w-2xl break-words">
+                        {item.value}
+                      </div>
+                      <p className="text-sm text-slate-400 mt-3">{item.subtext}</p>
+                    </div>
                   </div>
-                  <div className="text-lg font-bold text-navy">+91 22 4567 8900</div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-exim-green">
-                    <Mail size={20} />
-                  </div>
-                  <div className="text-lg font-bold text-navy">contact@satyanandexim.com</div>
-                </div>
+                ))}
               </div>
             </div>
 

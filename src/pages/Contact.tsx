@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 
 export default function Contact() {
+  const googleMapsUrl = "https://goo.gl/maps/bJfhE3vckNLvQHidA?g_st=aw";
+
   return (
     <div className="bg-white pb-24">
       <section className="bg-navy py-20 px-4 sm:px-10 text-center">
@@ -78,9 +80,18 @@ export default function Contact() {
 
           <div>
             <h2 className="text-3xl font-black text-navy mb-8">Our Location</h2>
-            <div className="h-[400px] bg-slate-100 rounded-3xl overflow-hidden relative border border-slate-200">
-              <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-medium">
-                [ Location Map Placeholder ]
+            <div className="h-[400px] bg-slate-100 rounded-3xl overflow-hidden relative border border-slate-200 flex items-center justify-center">
+              <div className="text-center px-6">
+                <MapPin size={40} className="mx-auto text-exim-green mb-4" />
+                <p className="text-slate-500 font-medium mb-4">Kakinada, Andhra Pradesh, India</p>
+                <a
+                  href={googleMapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex bg-navy text-white px-5 py-3 rounded-full font-bold hover:bg-exim-green transition-colors"
+                >
+                  Open in Google Maps
+                </a>
               </div>
             </div>
             <div className="mt-8 p-8 bg-slate-50 rounded-2xl border border-slate-100">

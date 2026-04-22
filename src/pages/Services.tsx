@@ -4,50 +4,34 @@ import {
   Globe,
   Anchor,
   Plane,
-  Warehouse,
-  Boxes,
-  ShieldAlert,
-  Leaf
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Services() {
   const allServices = [
     {
-      icon: <Leaf size={32} />,
-      title: "Export Product Handling",
-      desc: "Specialized packing, grading, and documentation support for spice and agro export consignments.",
-      features: ["Export Grade Sorting", "Batch Traceability", "Moisture-Safe Packing"]
-    },
-    {
       icon: <Anchor size={32} />,
-      title: "Sea Freight Support",
+      title: "Sea Freight",
       desc: "Reliable ocean logistics coordination for export and import cargo across key trade routes.",
       features: ["FCL / LCL Coordination", "Port Handling", "Freight Visibility"]
     },
     {
       icon: <Plane size={32} />,
-      title: "Air Cargo Support",
+      title: "Air Freight",
       desc: "Fast handling for urgent samples and high-priority consignments with route optimization.",
       features: ["Priority Bookings", "Airport Coordination", "Time-Critical Movement"]
     },
     {
       icon: <Truck size={32} />,
-      title: "Domestic Transportation",
+      title: "Land Cargo Solutions",
       desc: "Pan-India movement support for factory pickups, regional distribution, and final-mile delivery.",
       features: ["Factory to Port", "Regional Distribution", "Last-Mile Delivery"]
     },
     {
-      icon: <Warehouse size={32} />,
-      title: "Storage & Consolidation",
-      desc: "Secure warehousing with lot-wise handling for mixed product exports and dispatch planning.",
-      features: ["Inventory Handling", "Cross-Docking", "Dispatch Scheduling"]
-    },
-    {
-      icon: <ShieldAlert size={32} />,
-      title: "Risk & Compliance Support",
-      desc: "Support for shipment risk reduction and documentation readiness across export/import operations.",
-      features: ["Document Checks", "Route Planning", "Shipment Safeguards"]
+      icon: <Globe size={32} />,
+      title: "Project Cargo",
+      desc: "Special handling for oversized, heavy, and complex cargo movements with coordinated planning.",
+      features: ["Route Planning", "Heavy Cargo Support", "Movement Coordination"]
     }
   ];
 
@@ -56,17 +40,17 @@ export default function Services() {
       <section className="bg-[#12344C] py-24 px-4 sm:px-10 text-center relative overflow-hidden">
         <div className="relative z-10">
           <div className="inline-block px-4 py-1.5 rounded-full border border-blue-200 bg-blue-500/20 text-blue-100 text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
-            Secondary Service (30%)
+            Logistics Services
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">Logistics Support Services</h1>
           <p className="text-white/75 text-lg max-w-3xl mx-auto">
-            We provide secondary logistics support for export consignments, plus import and domestic cargo movement when required.
+            We provide focused logistics support across ocean, air, land, and project cargo movements.
           </p>
         </div>
       </section>
 
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 gap-10">
           {allServices.map((service, i) => (
             <motion.div
               key={i}

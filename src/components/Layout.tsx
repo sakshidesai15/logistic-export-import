@@ -104,11 +104,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link to="/" className="flex items-center gap-3">
             <img src="/logo-satyanand-exim.svg" alt="Satyanand Exim Logistics OPC Private Limited logo" className="w-10 h-10" />
             <div className="flex flex-col leading-tight tracking-tight">
-              <span className="text-[1.08rem] sm:text-2xl font-bold text-[#0F2B46]">
-                Satyanand Exim
+              <span className="text-[0.88rem] sm:text-lg font-bold text-[#0F2B46]">
+                Satyanand Exim Logistics
               </span>
-              <span className="text-[0.72rem] sm:text-sm font-semibold text-exim-green uppercase tracking-[0.22em]">
-                Logistics OPC Private Limited
+              <span className="text-[0.68rem] sm:text-xs font-semibold text-exim-green uppercase tracking-[0.18em]">
+                OPC Private Limited
               </span>
             </div>
           </Link>
@@ -196,9 +196,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link to="/" className="text-xl font-bold text-navy tracking-tight flex items-center gap-2">
             <img src="/logo-satyanand-exim.svg" alt="Satyanand Exim Logistics OPC Private Limited logo" className="w-7 h-7" />
             <span className="flex flex-col leading-tight">
-              <span className="text-sm sm:text-base text-navy">Satyanand Exim</span>
+              <span className="text-sm sm:text-base text-navy">Satyanand Exim Logistics</span>
               <span className="text-[0.62rem] sm:text-[0.72rem] font-semibold text-exim-green uppercase tracking-[0.18em]">
-                Logistics OPC Private Limited
+                OPC Private Limited
               </span>
             </span>
           </Link>
@@ -215,7 +215,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Mail size={14} className="text-exim-green" /> contact@satyanandexim.com
             </div>
             <div className="flex items-center gap-2">
-              <MapPin size={14} className="text-exim-green" /> Andhra Pradesh, India
+              <MapPin size={14} className="text-exim-green" /> Kakinada, Andhra Pradesh, India
             </div>
           </div>
         </div>
