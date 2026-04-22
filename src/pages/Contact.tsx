@@ -13,7 +13,7 @@ export default function Contact() {
       <section className="bg-navy py-20 px-4 sm:px-10 text-center">
         <h1 className="text-4xl md:text-6xl font-black text-white mb-6">Connect With SATYANAND EXIM</h1>
         <p className="text-white/75 text-lg max-w-2xl mx-auto">
-          Contact us for authentic Indian spice export requirements, premium quality specifications, and dependable global shipment support.
+          Contact us for heritage-led Indian spices, premium quality specifications, and dependable global shipment support.
         </p>
         <p className="text-white/90 text-base md:text-lg font-semibold mt-4">
           Satyanand Exim Logistics Pvt Ltd

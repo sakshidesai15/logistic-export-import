@@ -14,9 +14,9 @@ export default function EXIM() {
         <div className="catalog-hero-overlay" />
         <div className="catalog-hero-content">
           <h1>Our Products</h1>
-          <p>Authentic Indian spices and coconut products with premium export quality, purity, and reliable global supply support.</p>
+          <p>Heritage-led Indian spice categories with export quality, purity, and reliable global supply support.</p>
           <div className="catalog-badges">
-            <span><Award size={15} /> India’s Authentic Spice Excellence</span>
+            <span><Award size={15} /> Rooted in Indian Heritage</span>
             <span><PackageCheck size={15} /> Premium Grade</span>
             <span><MapPin size={15} /> Sourced from India</span>
           </div>
@@ -46,7 +46,7 @@ export default function EXIM() {
                     }`}
                   />
                   <div className="catalog-detail-body">
-                    <div className="catalog-detail-topline">{product.category}</div>
+                    <div className="catalog-detail-topline">Heritage-led Export | {product.category}</div>
                     <h3>{product.productTitle}</h3>
                     <p>{product.intro}</p>
                   </div>

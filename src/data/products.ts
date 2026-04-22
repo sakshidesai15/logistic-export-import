@@ -40,7 +40,7 @@ export const products: Product[] = [
     category: "Spices",
     image: spicesImage,
     intro:
-      "We export a wide range of authentic Indian spices known for strong aroma, rich flavor, and high purity. Directly sourced from India's top spice-growing regions, our products meet global export standards for food and health industries.",
+      "We export a wide range of authentic Indian spices known for strong aroma, rich flavor, and high purity. Rooted in India's long trade heritage, every lot is directly sourced from top spice-growing regions and prepared to global export standards for food and health industries.",
     keyQualitySpecs: [
       "Purity Level: 98% to 100% (export grade)",
       "Moisture Content: Controlled (<10 to 12%) to ensure long shelf life",
@@ -90,7 +90,7 @@ export const products: Product[] = [
     category: "Turmeric",
     image: turmericImage,
     intro:
-      "We export premium Indian turmeric selected for strong color, clean aroma, and reliable curcumin levels. Sourced from trusted farming regions and processed to export standards for food, nutraceutical, and wellness markets.",
+      "We export premium Indian turmeric selected for strong color, clean aroma, and reliable curcumin levels. Sourced from trusted farming regions, it is processed to export standards for food, nutraceutical, and wellness markets.",
     keyQualitySpecs: [
       "Curcumin Content: 2% to 5% in standard lots; premium lots available on request",
       "Moisture Content: Controlled (<10 to 12%) for export stability and shelf life",
@@ -144,7 +144,7 @@ export const products: Product[] = [
     category: "Spices",
     image: papperImageOne,
     intro:
-      "We export premium-grade black pepper sourced from India's leading spice-growing regions. Known for strong aroma, high piperine content, and bold flavor, our pepper meets global export standards for food and nutraceutical industries.",
+      "We export premium-grade black pepper sourced from India's leading spice-growing regions. The result is bold flavor, strong aroma, and high piperine content that meets global export standards for food and nutraceutical industries.",
     keyQualitySpecs: [
       "Piperine Content: 3% to 6% (standard) | 6% to 9% (premium grade)",
       "Bulk Density: 550 to 600 g/l (export grade) - higher density means better quality",
@@ -196,7 +196,7 @@ export const products: Product[] = [
     category: "Red Chilli",
     image: chilliImage,
     intro:
-      "We export high-quality Indian red chillies known for vibrant color, strong pungency, and consistent quality. Sourced from leading chilli-growing regions, our products meet global export standards for food processing and spice industries.",
+      "We export high-quality Indian red chillies known for vibrant color, strong pungency, and consistent quality. Each lot is selected from key growing belts and prepared for global export standards in food processing and spice industries.",
     keyQualitySpecs: [
       "ASTA Color Value (Color Strength): 80 to 150+ ASTA - higher ASTA means richer red color (premium quality)",
       "Pungency (Scoville Heat Units - SHU): Mild to very high depending on variety",
@@ -248,7 +248,7 @@ export const products: Product[] = [
     category: "Coconut & Coconut Products",
     image: coconutImage,
     intro:
-      "We export high-quality coconuts and coconut-based products sourced from India's leading coconut-growing regions. Known for high oil content, freshness, and purity, our products meet international export standards for food and industrial applications.",
+      "We export high-quality coconuts and coconut-based products sourced from India's leading coconut-growing regions. Freshness, high oil content, and purity are maintained to match international export standards for food and industrial applications.",
     keyQualitySpecs: [
       "Oil Content: 60% to 65% (premium coconuts) - higher oil means better quality and export value",
       "Moisture Content: Controlled for longer shelf life",

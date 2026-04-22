@@ -39,7 +39,7 @@ export default function ProductDetails() {
     ...(product.quality?.slice(0, 2) ?? []),
     ...(product.whyBuy?.slice(0, 2) ?? [])
   ])).slice(0, 3);
-  const heroBadges = ["Authentic Indian Origin", "Premium Export Quality", "High Purity"];
+  const heroBadges = ["Rooted in Indian Heritage", "Premium Export Quality", "High Purity"];
   const heroImagePosition: Record<string, string> = {
     turmeric: "center 74%",
     "red-chilli": "center 48%",
@@ -65,7 +65,7 @@ export default function ProductDetails() {
             />
             <div className="product-hero-overlay" />
             <div className="product-hero-content-layer">
-              <div className="catalog-detail-topline on-hero">{product.category}</div>
+              <div className="catalog-detail-topline on-hero">Heritage-led Export | {product.category}</div>
               <h1>{product.productTitle}</h1>
               <p>{product.intro}</p>
               <div className="product-hero-badges">
