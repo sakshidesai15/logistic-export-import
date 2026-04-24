@@ -28,10 +28,10 @@ export default function Services() {
       features: ["Factory to Port", "Regional Distribution", "Last-Mile Delivery"]
     },
     {
-      icon: <Globe size={32} />,
-      title: "Project Cargo",
-      desc: "Special handling for oversized, heavy, and complex cargo movements with coordinated planning.",
-      features: ["Route Planning", "Heavy Cargo Support", "Movement Coordination"]
+      icon: <Truck size={32} />,
+      title: "Domestic Transportation",
+      desc: "Reliable domestic movement for factory pickups, regional deliveries, and time-sensitive dispatches.",
+      features: ["Door-to-Door Support", "Regional Distribution", "Fast Dispatch Coordination"]
     }
   ];
 
@@ -44,7 +44,7 @@ export default function Services() {
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">Logistics Support Services</h1>
           <p className="text-white/75 text-lg max-w-3xl mx-auto">
-            We provide focused logistics support across ocean, air, land, and project cargo movements.
+            We provide focused logistics support across ocean, air, land, and domestic transportation movements.
           </p>
         </div>
       </section>
