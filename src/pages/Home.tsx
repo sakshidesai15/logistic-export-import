@@ -369,13 +369,13 @@ export default function Home() {
                   {
                     icon: <Phone size={24} />,
                     label: "Phone",
-                    value: "+91 22 4567 8900",
+                    value: "+91 734 896 7849",
                     subtext: "Business Contact"
                   },
                   {
                     icon: <Mail size={24} />,
                     label: "Email",
-                    value: "contact@satyanandexim.com",
+                    value: "vsatyanand71@gmail.com",
                     subtext: "Business Contact"
                   },
                 ].map((item) => (

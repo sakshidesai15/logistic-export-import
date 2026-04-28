@@ -72,7 +72,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     {
       name: "WhatsApp",
       iconClass: "fa-brands fa-whatsapp",
-      href: "https://wa.me/919999999999",
+      href: "https://wa.me/917348967849",
       className: "social-link-whatsapp"
     },
     {
@@ -88,10 +88,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="bg-[#103146] text-white py-2 px-4 sm:px-10 flex justify-between text-[12px] font-medium hidden sm:flex border-b border-white/10">
         <div className="flex gap-6">
           <span className="flex items-center gap-2">
-            <Phone size={14} className="text-exim-green" /> +91 22 4567 8900
+            <Phone size={14} className="text-exim-green" /> +91 734 896 7849
           </span>
           <span className="flex items-center gap-2">
-            <Mail size={14} className="text-exim-green" /> contact@satyanandexim.com
+            <Mail size={14} className="text-exim-green" /> vsatyanand71@gmail.com
           </span>
         </div>
         <div className="flex gap-4 opacity-80">
@@ -209,10 +209,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <div className="text-slate-500 text-xs font-semibold space-y-1">
             <div className="flex items-center gap-2">
-              <Phone size={14} className="text-exim-green" /> +91 22 4567 8900
+              <Phone size={14} className="text-exim-green" /> +91 734 896 7849
             </div>
             <div className="flex items-center gap-2">
-              <Mail size={14} className="text-exim-green" /> contact@satyanandexim.com
+              <Mail size={14} className="text-exim-green" /> vsatyanand71@gmail.com
             </div>
             <div className="flex items-center gap-2">
               <MapPin size={14} className="text-exim-green" /> Kakinada, Andhra Pradesh, India

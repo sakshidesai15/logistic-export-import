@@ -1,10 +1,6 @@
 import {
-  CheckCircle2,
   Target,
-  Award,
   TrendingUp,
-  Users2,
-  Leaf
 } from "lucide-react";
 
 import spiceHero from "../assets/spieces/3WgvVVgOuKX6G3zP2z0V_XAoyYHBfBXr6trmfYKm10-qhmUxQ_sgcvbdm5-bn42nj0BVUOmeaC8BbP_QcFRtW4Np5x06qUoWMCKcwsJ9HypGIFxFCg28OSCnADjCm_nk2VI1jZZ7s91uxJPNef-Hx8fnkscO2X8Sy_iU-CvjDS4NN3.jpg";
@@ -50,30 +46,10 @@ export default function About() {
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img src={spiceImage} alt="Premium spice products" />
             </div>
-            <div className="absolute -bottom-10 -left-10 bg-exim-green p-10 rounded-3xl text-white shadow-2xl hidden md:block">
-              <div className="text-5xl font-black mb-2">10+</div>
-              <div className="font-bold tracking-widest text-xs uppercase opacity-80">Years in Trade</div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-navy py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-10 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-          {[
-            { val: "100+", label: "Global Buyers", icon: <Users2 /> },
-            { val: "40+", label: "Export Markets", icon: <Award /> },
-            { val: "500+", label: "Shipments", icon: <CheckCircle2 /> },
-            { val: "100%", label: "Quality Focus", icon: <Leaf /> }
-          ].map((stat, i) => (
-            <div key={i} className="text-white">
-              <div className="text-exim-green flex justify-center mb-4 opacity-70">{stat.icon}</div>
-              <div className="text-4xl font-black mb-1">{stat.val}</div>
-              <div className="text-[10px] uppercase tracking-widest font-bold text-white/50">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
