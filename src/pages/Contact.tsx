@@ -6,9 +6,16 @@ import {
   Clock,
   ArrowRight
 } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
 
 export default function Contact() {
   const googleMapsUrl = "https://goo.gl/maps/bJfhE3vckNLvQHidA?g_st=aw";
+  const [searchParams] = useSearchParams();
+  const product = searchParams.get("product");
+  const action = searchParams.get("action");
+  const inquiryLabel = product
+    ? `${product.replace(/-/g, " ")}${action ? ` - ${action.replace(/-/g, " ")}` : ""}`
+    : "";
 
   return (
     <div className="bg-white pb-24">
@@ -20,6 +27,11 @@ export default function Contact() {
         <p className="text-white/90 text-base md:text-lg font-semibold mt-4">
           Satyanand Exim Logistics OPC Private Limited
         </p>
+        {inquiryLabel && (
+          <div className="mt-6 inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90">
+            Inquiry: {inquiryLabel}
+          </div>
+        )}
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-10 -mt-10">

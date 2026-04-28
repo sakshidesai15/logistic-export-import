@@ -31,7 +31,7 @@ export default function Home() {
     shipments: 0,
     clients: 0,
     team: 0,
-    years: 0
+    launchYear: 0
   });
 
   useEffect(() => {
@@ -96,7 +96,7 @@ export default function Home() {
       shipments: 500,
       clients: 100,
       team: 50,
-      years: 10
+      launchYear: 2024
     };
 
     let frame = 0;
@@ -110,7 +110,7 @@ export default function Home() {
         shipments: Math.round(targets.shipments * eased),
         clients: Math.round(targets.clients * eased),
         team: Math.round(targets.team * eased),
-        years: Math.round(targets.years * eased)
+        launchYear: Math.round(targets.launchYear * eased)
       });
 
       if (progress < 1) {
@@ -311,10 +311,10 @@ export default function Home() {
                 { value: stats.shipments, label: "Export Shipments" },
                 { value: stats.clients, label: "Global Buyers" },
                 { value: stats.team, label: "Support Team" },
-                { value: stats.years, label: "Years Experience" }
+                { value: stats.launchYear, label: "Launch Year" }
               ].map((counter) => (
                 <div key={counter.label} className="counter-card">
-                  <div className="counter-value">{counter.value}+</div>
+                  <div className="counter-value">{counter.label === "Launch Year" ? counter.value : `${counter.value}+`}</div>
                   <div className="counter-label">{counter.label}</div>
                 </div>
               ))}
